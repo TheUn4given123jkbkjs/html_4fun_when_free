@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0b0e14;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.menu-container {
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 32px;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+    color: #f6ad55;
+    text-transform: uppercase;
+}
+
+.sub-title {
+    color: #a0aec0;
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+/* Khung hiển thị danh sách phim dạng Grid */
+.films-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    justify-content: center;
+}
+
+/* Thẻ Card cho mỗi bộ phim */
+.film-card {
+    background: #1a202c;
+    border: 1px solid #2d3748;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.film-card:hover {
+    transform: translateY(-6px);
+    border-color: #f6ad55;
+    box-shadow: 0 10px 25px rgba(246, 173, 85, 0.15);
+}
+
+.card-cover {
+    height: 170px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-color: #2d3748;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #f6ad55;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 4px;
+    border: 1px solid #f6ad55;
+}
+
+.card-info {
+    padding: 18px;
+    text-align: left;
+}
+
+.card-info h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #edf2f7;
+}
+
+.card-info p {
+    font-size: 13px;
+    color: #a0aec0;
+    line-height: 1.5;
+}
+
+/* Trạng thái khóa cho Phim 2 chưa ra mắt */
+.film-card.locked {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.film-card.locked:hover {
+    transform: none;
+    border-color: #2d3748;
+    box-shadow: none;
+}
+
+.lock-overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: #cbd5e0;
+    font-weight: bold;
+    font-size: 14px;
+}

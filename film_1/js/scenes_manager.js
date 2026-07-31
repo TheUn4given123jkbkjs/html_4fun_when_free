@@ -1,6 +1,13 @@
 const scenesData = [
     // --- SCENE 1: Bên ngoài nhà thuốc ---
     {
+        
+        id: 0,
+        bg: '', // Không cần hình nền, sẽ tự thành màu đen
+        dialogues: [
+            { speaker: 'DẪN CHUYỆN', text: 'Vào một hôm mưa nọ...' }
+        ]
+        ,
         id: 1,
         bg: 'assets/imgs/scene1.png',
         dialogues: [
@@ -61,18 +68,24 @@ function updateDialogueDisplay() {
     const speakerEl = document.getElementById('speakerName');
     const textEl = document.getElementById('dialogueText');
 
-    // Cập nhật hình nền và thoại
-    screen.style.backgroundImage = `url('${currentScene.bg}')`;
+    // Nếu không có bg (như Scene 0), để màu nền đen
+    if (currentScene.bg) {
+        screen.style.backgroundImage = `url('${currentScene.bg}')`;
+    } else {
+        screen.style.backgroundImage = 'none';
+        screen.style.backgroundColor = '#000000';
+    }
+
     speakerEl.innerText = currentDialogue.speaker;
     textEl.innerText = currentDialogue.text;
 
     // Đổi màu tên nhân vật
     if (currentDialogue.speaker === 'THIỆN') {
-        speakerEl.style.color = '#63b3ed'; // Xanh dương cho Thiện
+        speakerEl.style.color = '#63b3ed';
     } else if (currentDialogue.speaker === 'TRUN') {
-        speakerEl.style.color = '#f6ad55'; // Cam ấm cho Trun
+        speakerEl.style.color = '#f6ad55';
     } else {
-        speakerEl.style.color = '#cbd5e0'; // Xám cho Dẫn chuyện
+        speakerEl.style.color = '#cbd5e0';
     }
 }
 

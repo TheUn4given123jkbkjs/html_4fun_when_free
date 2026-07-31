@@ -17,28 +17,12 @@ body {
     width: 800px;
     height: 450px;
     background-size: cover;
-    background-position: center;
+    /* Dịch chuyển vị trí hình nền thấp xuống (center 65% thay vì center) */
+    background-position: center 35%;
     border: 4px solid #222;
     box-shadow: 0 0 50px rgba(0,0,0,0.9);
     overflow: hidden;
     transition: background-image 0.5s ease-in-out;
-}
-
-/* Hiệu ứng mưa 2D */
-.rain {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background-image: 
-        repeating-linear-gradient(rgba(255,255,255,0.08) 0, rgba(255,255,255,0.08) 1px, transparent 1px, transparent 15px),
-        repeating-linear-gradient(90deg, rgba(255,255,255,0.08) 0, rgba(255,255,255,0.08) 1px, transparent 1px, transparent 20px);
-    background-size: 2px 25px, 25px 2px;
-    animation: rainMove 0.3s linear infinite;
-    z-index: 5;
-    pointer-events: none;
-}
-
-@keyframes rainMove {
-    to { transform: translateY(25px) translateX(-4px); }
 }
 
 /* Khung thoại Otome nằm ngang bên dưới */
@@ -53,7 +37,7 @@ body {
     border-radius: 8px;
     padding: 12px 20px;
     z-index: 10;
-    cursor: pointer; /* Biểu tượng bàn tay kích thích click */
+    cursor: pointer;
     user-select: none;
     display: flex;
     flex-direction: column;
@@ -70,7 +54,7 @@ body {
 .speaker-name {
     font-size: 14px;
     font-weight: bold;
-    color: #f6ad55; /* Màu tên nhân vật/người dẫn chuyện */
+    color: #f6ad55;
     letter-spacing: 1px;
 }
 
@@ -80,7 +64,6 @@ body {
     line-height: 1.4;
 }
 
-/* Mũi tên nhấp nháy báo hiệu click tiếp theo */
 .next-indicator {
     align-self: flex-end;
     font-size: 12px;
@@ -91,4 +74,8 @@ body {
 @keyframes bounce {
     from { transform: translateY(0); }
     to { transform: translateY(3px); }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }

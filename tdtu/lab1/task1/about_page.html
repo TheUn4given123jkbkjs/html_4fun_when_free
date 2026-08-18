@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+    <header>
+        <title>About Page</title>
+        <style>
+            table {
+                width: 100%;
+                table-layout: fixed;
+                border-collapse: separate;
+                border-spacing: 0;
+                border: 1px solid black; /* Viền bao ngoài cùng của bảng */
+            }
+
+            table td {
+                border-top: none;
+                border-bottom: none;
+                border-left: none;
+                border-right: 0.5px solid black;
+            }
+
+            table td:last-child {
+                border-right: none;
+            }
+            table td:first-child {
+                border-left: none;
+            }
+            
+
+            table img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+            }
+
+            table td{
+                padding: 0 0 2% 2%;
+                font-size: 1.2rem;
+            }
+
+            .member-name {
+                padding: 4% 2% 2% 2%;
+                font-weight: bold;
+                text-align: left;
+                font-size: 1.25rem;
+            }
+        </style>
+    </header>
+
+    <body>
+        <h1 style="text-align: center;">
+            About us page
+        </h1>
+        <p style="text-align: center;">
+            Some text about who we are and what we do.<br/>
+            Resize the browser window to see that this page is responsive by the way.
+        </p>
+        <h4 style="text-align: center;">
+            Our team
+        </h4>
+
+        <table border="1">
+            <tr>
+                <th>
+                    <img src="assets/team1.jpg" alt="Jane Doe" title="Jane Doe">
+                </th>
+                <th>
+                    <img src="assets/team2.jpg" alt="Johnny Depp" title="Johnny Depp">
+                </th>
+                <th>
+                    <img src="assets/team3.jpg" alt="Luke Evans" title="Luke Evans">
+                </th>
+            </tr>
+
+            <tr>
+                <td class="member-name">Jane Doe</td>
+                <td class="member-name">Johnny Depp</td>
+                <td class="member-name">Luke Evans</td>
+            </tr>
+
+            <tr>
+                <td>CEO & Founder</td>
+                <td>Product Owner</td>
+                <td>Team Leader</td>
+            </tr>
+
+            <tr>
+                <td>Some text that describes me lorem ipsum ipsum lorem.</td>
+                <td>Some text that describes me lorem ipsum ipsum lorem.</td>
+                <td>Some text that describes me lorem ipsum ipsum lorem.</td>
+            </tr>
+        </table>
+
+    </body>
+</html>

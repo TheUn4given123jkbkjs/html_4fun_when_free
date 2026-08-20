@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+    <header>
+        <title>Đăng nhập</title>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 6rem;
+            }
+            td{
+                width: fit-content;
+                text-align: left;
+                white-space: nowrap;
+                padding: 0.1rem 0.2rem
+            }
+            table{
+                border: 0.2rem solid #006ce0;
+                background-color: #dbe8f6;
+                border-radius: 8px; 
+                padding: 0.2rem;
+            }
+        </style>
+    </header>
+    <body>
+        <form action="login.php" method="post">
+            <table style="table-layout: auto;">
+                <tr>
+                    <td>Email / Username</td>
+                    <td><input type="text" name="username" required></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password" required></td>
+                </tr>  
+                <tr>
+                    <td><label for="remember">Remember me</label></td>
+                    <td  style="text-align: left;"><input type="checkbox" id="remember"name="rememberme"></td>
+                </tr>
+                <tr>
+                    <td rowspan="3"></td>
+                    <td><button type="submit"">Login</button></td>
+                </tr>
+                <tr>
+                    <td>Not registered? <a href="registered.html">Create a account here.</a></td>
+                </tr>
+                <tr>
+                    <td>Forgot your password? <a href="reset_password.htlm">Click here to reset.</a></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

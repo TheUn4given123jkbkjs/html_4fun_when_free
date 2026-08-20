@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Schedule</title>
+        <style>
+            table {
+                width: 80%;
+                table-layout: auto;
+                border-collapse: separate;
+                border-spacing: 0.15rem;
+                border: 0.15rem solid black;
+                margin: 0 auto;
+            }
+            th, td {
+                width: 1%;
+                border: 0.08rem solid black;
+                text-align: center;
+                white-space: nowrap;
+            }
+            table th{
+                padding: 2%;
+            }
+            .day{
+                text-align: center; 
+                color: rgb(76, 56, 193);
+                size: 1rem;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <h1 style="text-align: center; color: rgb(76, 56, 193)"><bold>STUDENT SCHEDULE</bold></h1>
+
+        <table>
+            <tr>
+                <th class="day">DAY/PERIOD</th>
+                <th style="text-align: center;">I</th>
+                <th style="text-align: center;">II</th>
+                <th rowspan="8" style="background-color: rgb(182, 234, 96);">LUNCH</th>
+                <th style="text-align: center;">III</th>
+                <th style="text-align: center;">IV</th>
+            </tr>
+            <tr>
+                <th class="day">MONDAY</th>
+                <td>Math</th>
+                <td>Physics</th>
+                <td colspan="2" rowspan="2" style="background-color: rgb(210, 210, 210);"></td>
+            </tr>
+            <tr>
+                <th class="day">TUESDAY</th>
+                <td colspan="2" style="background-color: rgb(255, 230, 138);font-weight: 500;">LAB</td>
+            </tr>
+            <tr>
+                <th class="day">WEDNESDAY</th>
+                <td>History</td>
+                <td>Music</td>
+                <td style="font-weight: 500;" colspan="2">SEMINAR</td>
+            </tr>
+            <tr>
+                <th class="day">THURSDAY</th>
+                <td>Physical Education</td>
+                <td>Swimming</td>
+                <td>Chemistry</td>
+                <td>Biology</td>
+            </tr>
+            <tr>
+                <th class="day">FRIDAY</th>
+                <td colspan="2" style="background-color: rgb(255, 230, 138); font-weight: 500;">LAB</td>
+                <td>Georaphy</td>
+                <td>Informatics</td>
+            </tr>
+            <tr>
+                <th class="day">SATURDAY</th>
+                <td>Math</td>
+                <td>Physics</td>
+                <td colspan="2" style="background-color: rgb(255, 230, 138); font-weight: 500;">LAB</td>
+            </tr>
+            <tr>
+                <th class="day">SUNDAY</th>
+                <td colspan="2" style="background-color: rgb(210, 210, 210);"></td>
+                <td style="background-color: rgb(210, 210, 210);"></td>
+                <td>Homework</td>
+            </tr>
+        </table>
+    </body>
+</html>

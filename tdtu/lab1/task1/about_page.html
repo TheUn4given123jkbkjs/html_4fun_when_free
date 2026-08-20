@@ -8,15 +8,14 @@
                 width: 100%;
                 table-layout: fixed;
                 border-collapse: separate;
-                border-spacing: 0;
-                border: 1px solid black; /* Viền bao ngoài cùng của bảng */
+                border-spacing: 0.1rem 0;
+                border: 0.2rem double black; /* Viền bao ngoài cùng của bảng */
             }
 
             table td {
+                border-right: 1px solid black;
                 border-top: none;
                 border-bottom: none;
-                border-left: none;
-                border-right: 0.5px solid black;
             }
 
             table td:last-child {
@@ -38,6 +37,7 @@
                 padding: 0 0 2% 2%;
                 font-size: 1.2rem;
             }
+            
 
             .member-name {
                 padding: 4% 2% 2% 2%;
@@ -90,6 +90,44 @@
                 <td>Some text that describes me lorem ipsum ipsum lorem.</td>
                 <td>Some text that describes me lorem ipsum ipsum lorem.</td>
             </tr>
+
+            <tr>
+                <td>Specializes in</td>
+                <td>Specializes in</td>
+                <td>Specializes in</td>
+            </tr>
+
+            <tr>
+                <td style="padding-bottom: 0%; padding-top: 0%;">
+                    <ul style="margin-bottom: 8%;margin-top:0%; padding-bottom: 0%; padding-top: 0%;">
+                        <li>JavaScript</li>
+                        <li>C/C++</li>
+                        <li>Java</li>
+                     </ul>
+                </td>
+                <td style="padding-bottom: 0%; padding-top: 0%;">
+                    <ol type="a" style="margin-bottom: 8%; margin-top:0%; padding-bottom: 0%; padding-top: 0%;">
+                        <li>Objective C</li>
+                        <li>Swift</li>
+                        <li>C/C++</li>
+                    </ol>
+                </td>
+
+                <td style="padding-bottom: 0%; padding-top: 0%;">
+                    <ul style="list-style-type: circle; margin-bottom: 8%;margin-top:0%; padding-bottom: 0%; padding-top: 0%;">
+                        <li>C#</li>
+                        <li>Visual Basic</li>
+                        <li>Typescript</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td><button type="button">Contact</button></td>
+                <td><button type="button">Contact</button></td>
+                <td><button type="button">Contact</button></td>
+            </tr>
+            
         </table>
 
     </body>

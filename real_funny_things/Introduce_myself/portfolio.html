@@ -12,49 +12,37 @@
 <body>
 
     <header class="fixed-top header">
-
-        <div class="train">
-            <span>My Trailblaze page</span>
-            <button
-                type="button"
-                class="btn p-0 border-0 bg-transparent"
-                id="trainButton"
-            >
-                <img
-                    src="assets/dau-tau.png"
-                    alt="Train navigation"
-                    class="img-fluid"
-                >
+        <!-- Thanh bên trái -->
+        <div class="phone-bar">
+            <span class="phone-title">Trailblazer</span>
+            <button type="button" class="btn p-0 border-0 bg-transparent" id="sidebarButton" aria-label="Toggle sidebar">
+                <img src="assets/trailblaze_icon.png" alt="Toggle sidebar">
             </button>
-
-            <!-- Các toa [1] [2] [3] -->
+        </div>
+        <!-- Khoảng trống giữa -->
+        <div class="header-space"></div>
+        <!-- Đoàn tàu -->
+        <div class="train">
+            <!-- [0] Đầu tàu -->
+            <button type="button" class="btn p-0 border-0 bg-transparent" id="trainButton">
+                <img src="assets/dau-tau.png" alt="Train navigation" class="img-fluid">
+            </button>
+            <!-- [1] [2] [3] Các toa -->
             <div class="carriages">
-
                 <button type="button" class="btn p-0 border-0 bg-transparent">
                     <img src="assets/toa-tau.png" alt="About Me">
-                    <span class="carriage-label">
-                        ABOUT ME
-                    </span>
+                    <span class="carriage-label">ABOUT ME</span>
                 </button>
-
                 <button type="button" class="btn p-0 border-0 bg-transparent">
                     <img src="assets/toa-tau.png" alt="Projects">
-                    <span  class="carriage-label">
-                        PROJECT
-                    </span>
+                    <span class="carriage-label">PROJECT</span>
                 </button>
-
                 <button type="button" class="btn p-0 border-0 bg-transparent">
                     <img src="assets/toa-tau.png" alt="Interests">
-                        <span class="carriage-label">
-                            INTEREST
-                        </span>
+                    <span class="carriage-label">INTEREST</span>
                 </button>
-
             </div>
-
         </div>
-
     </header>
 
     <main class="container">

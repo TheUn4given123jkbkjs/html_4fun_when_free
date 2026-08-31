@@ -1,0 +1,78 @@
+header {
+    height: 8rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url('assets/cosmic_backround.png');
+
+}
+.train {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    height: 100%;
+    padding: 0.1rem;
+
+    transition: transform 0.8s ease;
+}
+
+.train.show {
+    transform: translateX(-33rem);
+}
+
+#trainButton {
+    position: relative;
+    z-index: 2;
+}
+
+#trainButton img {
+    width: 8rem;
+    height: auto;
+    display: block;
+}
+
+.carriages {
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+    right: 0;
+
+    transform: translateX(100%);
+    transition: transform 0.8s ease;
+}
+
+.carriages.show {
+    transform: translateX(0);
+}
+
+.carriages img {
+    width: 11rem;
+    height: auto;
+    display: block;
+}
+
+.carriages button {
+    position: relative;
+}
+
+.carriage-label {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 73%;
+    padding: 0.3rem 0;
+
+    background: rgb(28, 44, 91);
+    text-align: center;
+    color: aliceblue;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: rgb(27, 67, 133) solid 0.1rem;
+    border-radius: 0.5rem;
+}

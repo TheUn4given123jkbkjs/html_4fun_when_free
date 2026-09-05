@@ -3,9 +3,124 @@
 <html lang="vi">
     <header>
         <title>Tạo tài khoản</title>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 6rem;
+            }
+            td{
+                width:fit-content;
+                text-align: left;
+                white-space: nowrap;
+                padding: 0.1rem 0.2rem
+            }
+            table{
+                border: 0.2rem solid #efefef;
+                background-color: #ffffff;
+                padding: 0.2rem;
+            }
+            input[type="text"], input[type="email"], input[type="date"], input[type="time"], select, textarea {
+                width: 100%;
+                box-sizing: border-box; /* giúp tính cả padding và border vào width */
+                height: auto;           
+            }
+            .optgroup {
+                color: #888888;
+                font-weight: normal;
+            }
 
+            .optgroup option {
+                color: #000000;
+            }
+        </style>
     </header>
     <body>
-        
+        <form action="register.php" method="post">
+            <table>
+                <tr>
+                    <td>Your Name</td>
+                    <td><input type="text" name="name" required placeholder="Full Name"></td>
+                </tr>
+                <tr>
+                    <td>Email Address</td>
+                    <td><input type="text" name="email" required placeholder="Email"></td>
+                </tr>
+                <tr>
+                    <td>Birthday</td>
+                    <td><input type="date" name="birthday" required></td>
+                </tr>
+                <tr>
+                    <td>Birthtime</td>
+                    <td><input type="time" name="birthime"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" id="gender_male" name="gender" value="male" required>
+                        <label for="gender_male">Male</label>
+
+                        <input type="radio" id="gender_female" name="gender" value="female">
+                        <label for="gender_female">Female</label>
+
+                        <input type="radio" id="gender_other" name="gender" value="other">
+                        <label for="gender_other">Other</label>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>From</td>
+                    <td>
+                        <select style="width: 100%;"name="country" required>
+                            <option value="">Select a country</option>
+                            <optgroup label="Asia" class="optgroup">
+                                <option value="vietnam">VietNam</option>
+                                <option value="laos">Laos</option>
+                                <option value="cambodia">Cambodia</option>
+                                <option value="singapore">Sigapore</option>
+                            </optgroup>
+                            <optgroup label="Europe" class="optgroup">
+                                <option value="france">France</option>
+                                <option value="belgium">Belgium</option>
+                                <option value="italy">Italy</option>
+                                <option value="finland">Finland</option>
+                                <option value="ireland">Ireland</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">Favorite IDE</td>
+                    <td>
+                        <input type="checkbox" name="favorite_ide" value="vcs">Visual Studio Code<br/>
+                        <input type="checkbox" name="favorite_ide" value="sublime_text">Sublime Text<br/>
+                        <input type="checkbox" name="favorite_ide" value="eclipse">Eclipse<br/>
+                        <input type="checkbox" name="favorite_ide" value="atom">Atom<br/>
+                        <input type="checkbox" name="favorite_ide" value="intelij_idea">Intelij Idea
+                    </td>
+                </tr>
+                <tr>
+                    <td>TOEIC Score</td>
+                    <td>
+                        <input type="range" name="toeic" min="5" max="990" value="500" step="5" oninput="toeic_val.value=this.value">
+                        <output id="toeic_val">500</output>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">Message</td>
+                    <td>
+                        <textarea name="message" rows="6" cols="24" placeholder="Enter your bio here"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="submit">Register</button>
+                        <button type="reset">Again</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
     </body>
 </html>

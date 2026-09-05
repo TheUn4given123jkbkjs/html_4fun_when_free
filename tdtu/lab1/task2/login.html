@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="vi">
     <header>
-        <title>Đăng nhập</title>
+        <meta charset="UTF-8">
+        <title>Login</title>
         <style>
             body{
                 display: flex;
@@ -14,13 +15,12 @@
                 width: fit-content;
                 text-align: left;
                 white-space: nowrap;
-                padding: 0.1rem 0.2rem
+                padding: 0.2rem
             }
-            table{
-                border: 0.2rem solid #006ce0;
-                background-color: #dbe8f6;
-                border-radius: 8px; 
-                padding: 0.2rem;
+            table {
+                border-collapse: collapse;
+                border: none;
+                padding: 0.2rem
             }
         </style>
     </header>
@@ -28,19 +28,19 @@
         <form action="login.php" method="post">
             <table style="table-layout: auto;">
                 <tr>
-                    <td>Email / Username</td>
-                    <td><input type="text" name="username" required placeholder="tên tài khoản"></td>
+                    <td><label for="email">Email / Username</label></td>
+                    <td><input type="email" id="email" name="email" required placeholder="email@domain.com"></td>
                 </tr>
                 <tr>
                     <td>Password</td>
-                    <td><input type="password" name="password" required placeholder="nhập mật "></td>
+                    <td><input type="password" id="password" name="password" required placeholder="password"</td>
                 </tr>  
                 <tr>
                     <td><label for="remember">Remember me</label></td>
                     <td  style="text-align: left;"><input type="checkbox" id="remember"name="rememberme"></td>
                 </tr>
                 <tr>
-                    <td rowspan="3"></td>
+                    <td></td>
                     <td><button type="submit"">Login</button></td>
                 </tr>
                 <tr>

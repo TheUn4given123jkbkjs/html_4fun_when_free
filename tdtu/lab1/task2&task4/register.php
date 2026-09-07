@@ -7,7 +7,7 @@
         $birthtime = $_POST['birthtime'] ?? 'N/A';
         $gender = $_POST['gender'] ?? 'N/A';
         $country = $_POST['country'] ?? 'N/A';
-        $f_ide = isset($_POST['favorite_ide']) && is_array($_POST['favorite_ide']) ? implode(", ", $_POST['favorite_ide']) : 'N/A';
+        $favorite_ide = isset($_POST['favorite_ide']) && is_array($_POST['favorite_ide']) ? implode(", ", $_POST['favorite_ide']) : 'N/A';
         $toeic = $_POST['toeic'] ?? 'N/A';
         $message = $_POST['message'] ?? 'N/A';
 

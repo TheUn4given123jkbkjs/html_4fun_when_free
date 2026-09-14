@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <meta charset="UTF-8">
+    <title>Day/Night Switch Button</title>
+    <head>
+        <style>
+            body{
+                background-color: #f4f4f9;
+                color: #333;
+                font-family: 'Times New Roman', Times, serif;
+                display: flex;
+                justify-content: center;
+                height: auto;
+                margin: 0;
+                transition: all 0,5s;
+            }
+
+            .card{
+                background-color: #ffffff;
+                padding: 30px;
+                width: 12rem;
+                border-radius: 12px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                transition: all 0,5s;
+            }
+            button {
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                border: none;
+                border-radius: 6px;
+                background-color: #007bff;
+                color: white;
+                transition: transform 0.2s, background-color 0.3s;
+            }
+            button:hover {
+                transform: scale(1.05);
+            }
+
+            /* Giao diện khi bật Night Mode */
+            body.night-mode {
+                background-color: #121212;
+                color: #e0e0e0;
+            }
+
+            body.night-mode .card {
+                background-color: #1e1e1e;
+                box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+            }
+
+            body.night-mode button {
+                background-color: #f39c12;
+                color: #121212;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="card">
+            <h2 id="title">Day Mode</h2>
+            <p id="decs">Gud morning! Hav a gud day</p>
+            <button id="theme_button" onclick="toggleMode()">Switch to Night mode</button>
+        </div>
+        <script>
+            function toggleMode(){
+                const isNight = document.body.classList.toggle("night-mode");
+
+                const title = document.getElementById("title");
+                const decs = document.getElementById("decs");
+                const btn = document.getElementById("theme_button");
+
+                if(isNight){
+                    title.textContent = "Night Mode";
+                    decs.textContent = "Gud evening! Take a rest on your bed";
+                    btn.textContent = "Switch to Day Mode";
+                }
+                else{
+                    title.textContent = "Day Mode";
+                    decs.textContent = "Gud morning! Hav a gud day";
+                    btn.textContent = "Switch to Night Mode";
+                }
+            }
+        </script>
+    </body>
+</html>

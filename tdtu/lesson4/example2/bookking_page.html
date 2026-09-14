@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Booking Page</title>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <h2>Booking</h2>
+
+            <form action="admin.php" method="POST">
+                <div class="field">
+                    <label>Name:</label>
+                    <input type="text" name="name" id="name" required placeholder="Enter your name...">
+                </div>
+
+                <div class="field">
+                    <label>Chosse a day:</label>
+                    <select name="day" id="day">
+                        <option value="Monday">Moday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                        <option value="Sunday">Sunday</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>Type 'confirm' to enable the submit button:</label>
+                    <input type="text" id="typeConfirm" placeholder="Type 'confirm'...">
+                </div>
+
+                <button type="submit" id="btnSubmit" disabled>Submit your booking</button>
+            </form>
+        </div>
+
+        <script>
+            var typeConfirm = document.getElementById("typeConfirm");
+            var btnSubmit = document.getElementById("btnSubmit");
+            function checkConfirm(){
+                var text = typeConfirm.value.trim();
+                if(text ==="confirm"){
+                    btnSubmit.disabled = false;
+                }
+                else{
+                    btn.disabled = true;
+                }
+            }
+
+            typeConfirm.addEventListener("input", checkConfirm);
+        </script>
+    </body>
+</html>

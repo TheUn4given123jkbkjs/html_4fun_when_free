@@ -5,13 +5,14 @@
         $day = isset($_POST['day']) ? trim($_POST['day']) : '';
 
         if(!empty($name) && !empty($day)){
-            $_SESSION['booking_inf'] = [
+            $_SESSION['booking_info'] = [
                 'name' => $name,
                 'day' => $day,
                 'status' => 'confirmed'
             ];
         }
     }
-    header("Location: admin.php");
+    session_write_close();
+    header("Location: admin.html");
     exit();
 ?>

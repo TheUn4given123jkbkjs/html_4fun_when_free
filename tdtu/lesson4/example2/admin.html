@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Admin Page</title>
+    </head>
+
+    <body>
+        <h2>Admin Dashboard</h2>
+
+        <div id="content">
+            <p>Loading data, meow...</p>
+        </div>
+
+        <br>
+        <a href="bookking_page.html">Return booking page</a>
+        <script>
+            function loadingBookingData(){
+                var contentDiv = document.getElementById("content");
+                setTimeout(function() {
+                fetch("getBooking.php")
+                    .then(function(response) {
+                        return response.json();
+                    })
+                    .then(function(data) {
+                        if (data && data.name) {
+                            var html = '';
+                            html += '<div class="card">';
+                            html += '  <h3 style="margin: 0; color: #28a745;">Đã nhận lịch hẹn mới thành công!</h3>';
+                            html += '</div>';
+                            html += '<table>';
+                            html += '  <tr><th>Tên Khách Hàng</th><th>Ngày Đặt Hẹn</th><th>Trạng Thái</th></tr>';
+                            html += '  <tr>';
+                            html += '    <td>' + data.name + '</td>';
+                            html += '    <td>' + data.day + '</td>';
+                            html += '    <td><strong style="color: green;">' + data.status + '</strong></td>';
+                            html += '  </tr>';
+                            html += '</table>';
+                            
+                            contentDiv.innerHTML = html;
+                        } else {
+                            contentDiv.innerHTML = "<p>Chưa có dữ liệu lịch hẹn nào được gửi lên!</p>";
+                        }
+                    })
+                    .catch(function(error) {
+                        console.error("Lỗi khi tải dữ liệu:", error);
+                        contentDiv.innerHTML = "<p>Có lỗi xảy ra khi tải dữ liệu!</p>";
+                    });
+            }, 800);
+        }
+
+            window.addEventListener("DOMContentLoaded", loadingBookingData);
+        </script>
+    </body>
+</html>

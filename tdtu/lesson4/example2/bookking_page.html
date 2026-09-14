@@ -11,7 +11,7 @@
         <div class="container">
             <h2>Booking</h2>
 
-            <form action="admin.php" method="POST">
+            <form action="processBooking.php" method="POST">
                 <div class="field">
                     <label>Name:</label>
                     <input type="text" name="name" id="name" required placeholder="Enter your name...">
@@ -20,7 +20,7 @@
                 <div class="field">
                     <label>Chosse a day:</label>
                     <select name="day" id="day">
-                        <option value="Monday">Moday</option>
+                        <option value="Monday">Monday</option>
                         <option value="Tuesday">Tuesday</option>
                         <option value="Wednesday">Wednesday</option>
                         <option value="Thursday">Thursday</option>
@@ -48,7 +48,7 @@
                     btnSubmit.disabled = false;
                 }
                 else{
-                    btn.disabled = true;
+                    btnSubmit.disabled = true;
                 }
             }
 

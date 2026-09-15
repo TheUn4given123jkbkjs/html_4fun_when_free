@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Login page</title>
+    </head>
+
+    <body>
+        <div>
+            <h2>Đăng nhập</h2>
+            <form action="login.php" method="POST">
+                <div>
+                    <label>MSSV: </label>
+                    <input type="text" name="mssv" required placeholder="mssv">
+                </div>
+
+                <div>
+                    <label>Họ và Tên: </label>
+                    <input type="text" name="name" required placeholder="Nguyễn Thành Người">
+                </div>
+
+                <div>
+                    <label>Giới tính: </label>
+                    
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+                <button type="submit">Đăng nhập</button>
+            </form>
+        </div>
+    </body>
+</html>
